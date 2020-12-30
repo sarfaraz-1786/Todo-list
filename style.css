@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #93a5cf, #e4efe9);
+  font-family: poppin, sans-serif;
+}
+
+header {
+  font-size: 2.7rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  font-size: 2.2rem;
+  padding: 0.4rem;
+  background: white;
+  border: none;
+}
+form button {
+  color: tomato;
+  background: white;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  outline: none;
+}
+
+form button:hover {
+  color: white;
+  background: tomato;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 15%;
+  list-style: none;
+}
+.todo-div {
+  margin: 0.8rem;
+  background: white;
+  color: black;
+  display: flex;
+  font-size: 1.9rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.8s ease-out;
+}
+
+.todo-item {
+  flex: 1;
+}
+
+.check-btn,
+.trash-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.check-btn {
+  background: rgb(77, 207, 77);
+}
+
+.delete {
+  transform: translateY(8rem) rotateZ(100deg);
+  opacity: 0;
+}
+
+.fa-trash,
+.fa-check,.fa-edit {
+  pointer-events: none;
+}
+
+.select{
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select{
+  color: tomato;
+  width: 12rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.select::after{
+  content: '\25BC';
+  color: white;
+  position: absolute;
+  background: tomato;
+  top: 0;
+  right: 0;
+  padding: 1.1rem;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+
+.select:hover::after{
+  color: tomato;
+  background: white;
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.edit-btn{
+  background: black;
+  color: white;
+}
+
+.edit-btn:hover{
+  background: white;
+  color: tomato;
+}
